@@ -13,8 +13,8 @@ get "/start" do
   erb (:start)
 end
 
-get "/result/:player1/:player2" do
+get "/start/:player1/:player2" do
   game = Rockpaperscissors.new(params[:player1], params[:player2])
   @games = game.game()
-  erb(:result)
+  erb(:start)
 end
